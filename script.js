@@ -1,15 +1,15 @@
 function getNumbers() {
     const input = document.getElementById("inputNumbers").value;
     const numbers = input.split(",").map(num => Number(num.trim()));
-    document.getElementById("originalList").textContent = numbers.join(", ");
+    document.getElementById("originalList").textContent = numbers.join(", "); // mostra a lista original
     return numbers;
 }
 
 function bubbleSort(arr) {
-    let a = [...arr];
+    let a = [...arr]; // spread cria uma cópia do array
     for (let i = 0; i < a.length; i++) {
         for (let j = 0; j < a.length - 1; j++) {
-            if (a[j] > a[j + 1]) {
+            if (a[j] > a[j + 1]) { //se o elemento atual for maior que o próximo, então estão fora de ordem.
                 let temp = a[j];
                 a[j] = a[j + 1];
                 a[j + 1] = temp;
